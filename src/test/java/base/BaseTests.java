@@ -5,28 +5,22 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.HomePage;
 
 import java.util.List;
 
 public class BaseTests {
 
     private WebDriver driver;
+    protected HomePage homePage;
 
     public void setUp(){
         System.setProperty("webdriver.chrome.driver","resources/chromedriver");
         driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
 
-        WebElement shiftContentLink = driver.findElement(By.linkText("Shifting Content"));
-        shiftContentLink.click();
+        homePage = new HomePage(driver);
 
-        WebElement menuElement = driver.findElement(By.partialLinkText("Menu Element"));
-        menuElement.click();
-
-        List <WebElement> menuItems = driver.findElements(By.tagName("li"));
-        System.out.println(menuItems.size());
-
-        System.out.println(driver.getTitle());
         driver.quit();
     }
 
