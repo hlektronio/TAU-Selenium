@@ -11,7 +11,7 @@ public class EmailSentPage {
     public EmailSentPage(WebDriver driver){
         this.driver = driver;
     }
-    public String EmailSentPageTitle(){
+    public String EmailSentPageConfirmation(){
         return driver.findElement(content).getText();
     }
 }

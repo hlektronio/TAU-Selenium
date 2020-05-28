@@ -15,6 +15,6 @@ public class ForgotPasswordTests extends BaseTests {
         forgotPasswordPage.writeEmail("ele@ff.ww");
         EmailSentPage emailSentPage = forgotPasswordPage.clickSubmit();
 
-        assertEquals("Your e-mail's been sent!",emailSentPage.EmailSentPageTitle());
+        assertEquals("Your e-mail's been sent!",emailSentPage.EmailSentPageConfirmation());
     }
 }
