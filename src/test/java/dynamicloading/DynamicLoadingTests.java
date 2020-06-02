@@ -14,5 +14,17 @@ public class DynamicLoadingTests extends BaseTests {
         DynamicLoadingexample2.clickStartButton();
         String text = DynamicLoadingexample2.getTextFromLoadedElement();
         assertEquals(text,"Hello World!", "Text is incorrect");
+        }
+
+//        @Test
+//    public void testOpenDynamicLoadingInNewTab(){
+//        var DynamicLoadingpage = homePage.clickDynamicLoading();
+//        var DynamicLoadingexample2 = DynamicLoadingpage.rightClickSecondLink();
+//        DynamicLoadingexample2.clickStartButton();
+//        String text = DynamicLoadingexample2.getTextFromLoadedElement();
+//        assertEquals(text,"Hello World!", "Text is incorrect");
+//        }
+
+
     }
-}
+
